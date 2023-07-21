@@ -1,0 +1,33 @@
+Cassandra commands
+
+
+ ** Creating keyspace
+
+CREATE KEYSPACE files WITH REPLICATION = {'class':'SimpleStrategy' , 'replication-factor':1};
+
+** Enter keyspace
+
+USE files
+
+** Create table 
+
+Create table retail (
+  invoicenumber INT,
+  createdtime bigint,
+  storeid TEXT,
+  posid TEXT,
+  customertype TEXT,
+  paymentmethod TEXT,
+  deliverytype TEXT,
+  city TEXT,
+  state TEXT,
+  pincode FLOAT,
+  itemcode INT,
+  itemdescription TEXT,
+  itemprice FLOAT,
+  itemqty INT,
+  totalvalue FLOAT,
+  cust_id INT PRIMARY KEY,
+);
+
+Select * from files limit 5;
