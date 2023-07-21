@@ -4,7 +4,9 @@ In this project we have explained **"An End-To-End Architecture of E-commerce In
 The Spark File Streaming Project aims to process nested e-commerce invoice JSON data to per-product invoice information, and convert it into CSV format. The processed data will then be sent to two destinations: 'hive' directory (present in HDFS) for further analysis using Hive and 'cassandra' directory (present in HDFS) for storage in a Cassandra NoSQL database, as well as an AWS S3 bucket for querying using AWS Glue and Athena with visualization in AWS Quicksight.
 ## Architecture Diagram
 Refer to the provided architecture diagram for an overview of the project's components.
-![file_streaming drawio](https://github.com/Sarang823/FileStreaming-using-Spark-and-Airflow/assets/133379507/d4019da3-9598-4d82-82f8-5ba7540fd4d1)
+
+![file_streaming_architecture](https://github.com/Sarang823/FileStreaming-using-Spark-and-Airflow/assets/133379507/4e3a7d24-13e4-44d0-bf22-741286e0971f)
+
 
 
 ## Problem Statement
