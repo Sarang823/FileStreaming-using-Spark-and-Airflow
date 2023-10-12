@@ -4,8 +4,8 @@ hdfs_path = 'hdfs://localhost:9000/user/ubh01/to_cassandra/part-00000-7a3e8ab2-5
 # file=hdfs.ls(hdfs_path)
 bucket = 'spark-file-streaming-project'
 s3_client = boto3.client(service_name='s3', \
-                         aws_access_key_id= 'AKIA54VCZWUMNFAEE2ET', \
-                         aws_secret_access_key ='WvUD78fQSG9uZVGVGmxJz98Ds9BMrxwsbwE533eQ')
+                         aws_access_key_id= '<put your aws access key here>', \
+                         aws_secret_access_key ='<put your aws secret access key here>')
 
 s3_folder = 'retail/invoice.csv'
 with hdfs.open(hdfs_path,'r') as f:
