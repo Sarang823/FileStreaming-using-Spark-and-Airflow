@@ -42,13 +42,6 @@ spark = SparkSession.builder \
     .appName("HDFSFileStreaming") \
     .getOrCreate()
 
-# spark = SparkSession.builder \
-#   .appName("Write to S3 Example") \
-#   .config("spark.hadoop.fs.s3a.access.key", "AKIA2U3TXUVMACK7E7FL") \
-#   .config("spark.hadoop.fs.s3a.secret.key", "vEyHqgUy9NrogEx77oRBaL55BoX7Y0/2xVWh8vdd") \
-#   .config("spark.hadoop.fs.s3a.endpoint", "https://s3.console.aws.amazon.com/s3/buckets/my-bucket-28may?region=ap-south-1&tab=objects") \
-#   .getOrCreate()
-
 # Read files from the HDFS directory
 streaming_df = spark.readStream \
     .schema(json_schema) \
@@ -82,7 +75,7 @@ query2 = flattenDF.writeStream \
     .format("csv") \
     .option('header',True) \
     .option("path", outputPath2) \
-    .option("checkpointLocation", "hdfs://localhost:9000/user/ubh01/checkpoint/") \
+    .option("checkpointLocation", "hdfs://localhost:9000/user/ubh01/checkpoint1/") \
     .start()
 
 
